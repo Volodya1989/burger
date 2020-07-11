@@ -10,28 +10,38 @@ const orm = {
       cb(result);
     });
   },
-  insertOne: () => {},
-////   EXAMPLE OF INSERT 
-//   create: function(table, cols, vals, cb) {
-//     var queryString = "INSERT INTO " + table;
+  insertOne: (table, cols, vals, cb) => {
+    var queryInsert = `INSERT INTO ?? (??) VALUES (?) `;
+    console.log(queryInsert);
+    connection.query(queryInsert, [table,cols,vals], function (err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
 
-//     queryString += " (";
-//     queryString += cols.toString();
-//     queryString += ") ";
-//     queryString += "VALUES (";
-//     queryString += printQuestionMarks(vals.length);
-//     queryString += ") ";
+  // //   EXAMPLE OF INSERT
+  //   create: function(table, cols, vals, cb) {
+  //     var queryString = "INSERT INTO " + table;
 
-//     console.log(queryString);
+  //     queryString += " (";
+  //     queryString += cols.toString();
+  //     queryString += ") ";
+  //     queryString += "VALUES (";
+  //     queryString += printQuestionMarks(vals.length);
+  //     queryString += ") ";
 
-//     connection.query(queryString, vals, function(err, result) {
-//       if (err) {
-//         throw err;
-//       }
+  //     console.log(queryString);
 
-//       cb(result);
-//     });
-//   },
+  //     connection.query(queryString, vals, function(err, result) {
+  //       if (err) {
+  //         throw err;
+  //       }
+
+  //       cb(result);
+  //     });
+  //   },
 
   updateOne: () => {},
 };
