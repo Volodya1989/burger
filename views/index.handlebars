@@ -5,32 +5,47 @@
     </div>
     <h2>Burgers are not ready!</h2>
 
-    <ul>
+    <ol>
         {{#each burgers}}
         {{#unless devoured}}
-        <li>{{burger_name }} <button type="submit" class="btn btn-prmimary ">Devoured </button></li>
+        <li>{{burger_name }} <button id="devoured" data-id={{id}} type="submit" class="btn btn-prmimary ">Devoured </button></li>
         {{/unless}}
         {{/each}}
-    </ul>
+    </ol>
 
     <h2>Burgers are ready!</h2>
-
+<ol>
     {{#each burgers}}
     {{#if devoured}}
     <li>{{burger_name }}</li>
     {{/if}}
     {{/each}}
-
+</ol>
     <div>
         <form id="newBurger">
             <textarea type="text" name="burger"></textarea>
 
-            <button type="submit" name="devoured" value="0">Submit</button>
+            <button type="submit" name="devoured">Submit</button>
         </form>
     </div>
 </div>
 <script type="text/javascript">
     $(() => {
+
+        $("#devoured").on("click", function (event) {
+            var id = $(this).data("id");
+            // Send the PUT request.
+            console.log(id);
+            $.ajax("/api/burgers/" + id, {
+                type: "PUT",
+            }).then(
+                function () {
+                    console.log(" your burger is ready");
+                    // Reload the page to get the updated list
+                    location.reload();
+                }
+            );
+        });
         $("#newBurger").on("submit", function (event) {
             // Make sure to preventDefault on a submit event.
             event.preventDefault();
