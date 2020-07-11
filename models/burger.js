@@ -4,7 +4,14 @@ const burgers = {
         orm.selectAll("burgers",(res)=>{
             cb(res)
         });
-    } 
+    },
+    insertOne: (cb) => {},
+////   EXAMPLE OF INSERT 
+    // create: function(cols, vals, cb) {
+    //     orm.create("cats", cols, vals, function(res) {
+    //       cb(res);
+    //     });
+    //   },
 }
 
 // Export the database functions for the controller (burgers_controller.js).

@@ -18,12 +18,21 @@ router.get("/", (_, res) => {
   });
 
 
-// app.post('/burger', (req) => {
-//     // const { name } = req.body;
-//     // const burger = orm.insertOne({ name });
-// res.redirect("/");
-//     // resp.send(burger);
-// });
+////route to post burger!!!!!!
+// router.post("/api/burger", function(req, res) {
+//     burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
+//       // Send back the ID of the new quote
+//       res.json({ id: result.insertId });
+//     });
+//   });
+
+////   EXAMPLE OF INSERT 
+// router.post("/api/cat", function(req, res) {
+//     cat.create(["name", "sleepy"], [req.body.name, req.body.sleepy], function(result) {
+//       // Send back the ID of the new quote
+//       res.json({ id: result.insertId });
+//     });
+//   });
 
 // app.put('/burger/:id', (req) => {
 //     // update new row in the table
