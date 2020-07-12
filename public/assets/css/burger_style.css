@@ -10,6 +10,21 @@ body {
   margin-right: 15px;
   border-radius: 30px;
   border: 2px solid rgb(124, 5, 124);
-
 }
+textarea {
+  width: 250px;
+  margin: 10px;
+}
+ol {
+  list-style: decimal inside;
+}
+.done {
+  border: 1px solid black;
+  background-color: lightgray;
+  padding: 3px 15px;
+  padding-right: 60px;
+  color: rgba(46, 44, 44, 0.671);
+}
+/* .notDoneYet{
 
+} */
