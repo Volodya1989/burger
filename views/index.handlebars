@@ -14,7 +14,7 @@
                 {{#unless devoured}}
 
                 <li class="liNotDone"><span class="notDoneYet">{{this.id}}. {{ burger_name }} </span><button
-                        id="devoured" data-id={{id}} type="submit" class="btn btn-prmimary ">Devour
+                        class="dev" data-id={{id}} type="submit" class="btn btn-prmimary ">Devour
                         it!
                     </button></li>
 
@@ -53,7 +53,7 @@
 <script type="text/javascript">
     $(() => {
 
-        $("#devoured").on("click", function (event) {
+        $(".dev").on("click", function (event) {
             var id = $(this).data("id");
             // Send the PUT request.
             console.log(id);
