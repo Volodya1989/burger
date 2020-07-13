@@ -1,10 +1,10 @@
 const connection = require("./connection.js");
 function objToSql(ob) {
-  var arr = [];
+  let arr = [];
 
   // loop through the keys and push the key/value as a string int arr
   for (var key in ob) {
-    var value = ob[key];
+    let value = ob[key];
     // check to skip hidden properties
     if (Object.hasOwnProperty.call(ob, key)) {
       // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
@@ -24,7 +24,7 @@ function objToSql(ob) {
 const orm = {
   selectAll: (tableInput, cb) => {
     // const querySelect = "SELECT * FROM ??"; [tableInput],
-    var querySelect = "SELECT * FROM " + tableInput + ";";
+    let querySelect = "SELECT * FROM " + tableInput + ";";
 
     connection.query(querySelect, (err, result) => {
       if (err) throw err;
@@ -32,7 +32,7 @@ const orm = {
     });
   },
   insertOne: (table, cols, vals, cb) => {
-    var queryInsert = `INSERT INTO ?? (??) VALUES (?) `;
+    const queryInsert = `INSERT INTO ?? (??) VALUES (?) `;
     console.log(queryInsert);
     connection.query(queryInsert, [table, cols, vals], function (err, result) {
       if (err) {
@@ -43,7 +43,7 @@ const orm = {
   },
 
   updateOne: (table, cols, vals, cb) => {
-    var queryString = "UPDATE " + table;
+    let queryString = "UPDATE " + table;
 
     queryString += " SET ";
     queryString += objToSql(cols);
