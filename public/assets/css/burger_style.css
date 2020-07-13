@@ -2,6 +2,9 @@ body {
   background: url(/assets/img/alex-perez-ioJBsYQ-pPM-unsplash.jpg) left top;
   background-size: 100%;
 }
+h1{
+  color: wheat;
+}
 
 .card-img {
   margin-top: 10%;
