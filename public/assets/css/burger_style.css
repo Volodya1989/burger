@@ -1,6 +1,5 @@
-body{
+body {
   background-image: url(/assets/img/background.jpg);
-  text-align: center;
 }
 
 .card-img {
@@ -26,36 +25,34 @@ ol {
   /* padding-right: 50px; */
   color: rgba(46, 44, 44, 0.671);
   width: 400px;
-
 }
 
 ol li span {
   float: left;
-  width: 300px;
+  width: 300px; 
+  padding-right: 0%;
 }
- .notDoneYet {
+.notDoneYet {
   border: 1px solid black;
   padding: 5px 5px;
   background-color: violet;
   margin-right: 10px;
   border-radius: 10px;
-  
 }
 li {
   list-style: none;
-
 }
 .liNotDone {
   margin-bottom: 25px;
   height: 30px;
 }
-h6{
+h6 {
   color: wheat;
   margin-top: 20px;
   margin-bottom: 100px;
 }
 
-.dev{
+.dev {
   float: left;
   margin-left: 15px;
 }
