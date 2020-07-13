@@ -5,27 +5,35 @@
     <div class="row justify-content-center">
         <h1>Eat-Da-Burger!</h1>
     </div>
-    <div class="row justify-content-center">
-        <ol>
-            {{#each burgers}}
-            {{#unless devoured}}
-            <span>
+
+    <div class="row ">
+        <div class="col-sm-6">
+
+            <ol>
+                {{#each burgers}}
+                {{#unless devoured}}
+
                 <li class="liNotDone"><span class="notDoneYet">{{this.id}}. {{ burger_name }} </span><button
                         id="devoured" data-id={{id}} type="submit" class="btn btn-prmimary ">Devour
                         it!
                     </button></li>
-            </span>
-            {{/unless}}
-            {{/each}}
-        </ol>
 
-        <ol>
-            {{#each burgers}}
-            {{#if devoured}}
-            <li class="done"> {{this.id}}. {{burger_name }}</li>
-            {{/if}}
-            {{/each}}
-        </ol>
+                {{/unless}}
+                {{/each}}
+            </ol>
+        </div>
+
+        <div class="col-sm-6">
+
+            <ol>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li class="done"> {{this.id}}. {{burger_name }}</li>
+                {{/if}}
+                {{/each}}
+            </ol>
+        </div>
+
     </div>
     <div class="row justify-content-center">
         <form id="newBurger">

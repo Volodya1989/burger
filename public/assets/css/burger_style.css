@@ -1,5 +1,6 @@
-body {
+body{
   background-image: url(/assets/img/background.jpg);
+  text-align: center;
 }
 
 .card-img {
@@ -12,7 +13,7 @@ body {
   border: 2px solid rgb(124, 5, 124);
 }
 textarea {
-  width: 250px;
+  width: 300px;
   margin: 10px;
 }
 ol {
@@ -27,21 +28,25 @@ ol {
   width: 400px;
 
 }
-.notDoneYet {
+
+ol li span {
+  float: left;
+  width: 300px;
+}
+ .notDoneYet {
   border: 1px solid black;
-  padding: 20px 20px;
+  padding: 5px 5px;
   background-color: violet;
-  margin-right: 20px;
+  margin-right: 10px;
   border-radius: 10px;
+  
 }
 li {
   list-style: none;
-  width: 300px;
 
 }
 .liNotDone {
-  margin-bottom: 50px;
-  width: 300px;
+  margin-bottom: 25px;
   height: 30px;
 }
 h6{
