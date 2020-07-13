@@ -1,8 +1,10 @@
 body {
-  background-image: url(/assets/img/background.jpg);
+  background: url(/assets/img/alex-perez-ioJBsYQ-pPM-unsplash.jpg) left top;
+  background-size: 100%;
 }
 
 .card-img {
+  margin-top: 10%;
   float: left;
   width: 250px;
   height: 250px;
@@ -17,6 +19,7 @@ textarea {
 }
 ol {
   list-style: decimal inside;
+  padding: 0;
 }
 .done {
   border: 1px solid black;
@@ -25,10 +28,10 @@ ol {
   /* padding-right: 50px; */
   color: rgba(46, 44, 44, 0.671);
   width: 400px;
+  margin: auto;
 }
 
 ol li span {
-  float: left;
   width: 300px; 
   padding-right: 0%;
 }
@@ -40,6 +43,8 @@ ol li span {
   border-radius: 10px;
 }
 li {
+  display: flex;
+  justify-content: center;
   list-style: none;
 }
 .liNotDone {
