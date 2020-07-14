@@ -16,8 +16,10 @@
 ## Installation
 
 1. Clone the repo.
-2. Run npm install command in your terminal/bash.
-3.  Then run  node server.js command in your terminal/bash.
+2. Insert your password into sql connection.
+3. Run shema.sql file in MySQL Workbench.
+4. Run npm install command in your terminal/bash.
+5. Then run node app.js command in your terminal/bash.
 
 ## Usage
 
