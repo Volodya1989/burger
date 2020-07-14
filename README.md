@@ -25,8 +25,7 @@ This Eat-Da-Burger  WEB Application provides opportunity to place orders and to 
 
 The following screenshot demonstrates the application functionality:
 
-![HomePage demo](./Develop/homepage.png)
-![Notes page demo](./Develop/notes.png)
+![HomePage demo](./public/assets/img/homePage.png)
 
 
 
@@ -36,7 +35,7 @@ This was a solo project comlepeted by Volodymyr Petrytsya as homework for the Ge
 
 ## URL
 
-[Link to deployed Eat-Da-Burger Application](https://evening-inlet-57489.herokuapp.com/)
+[Link to the deployed Eat-Da-Burger Application](https://evening-inlet-57489.herokuapp.com/)
 
 
 
